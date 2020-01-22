@@ -6,11 +6,19 @@ class ScratchLinearRegression():
 
     Attributes
     ----------
-    self.coef_ : 次の形のndarray, shape (n_features,)
+    iter : int
+        イテレーション数
+    lr : float, default 0.01
+        学習率
+    no_bias : bool, default False
+        バイアス項を入れない場合はTrue
+    verbose : bool , default False
+        学習過程を出力する場合はTrue
+    coef_ : 次の形のndarray, shape (n_features,)
         パラメータ
-    self.loss : 次の形のndarray, shape (self.iter,)
+    loss : 次の形のndarray, shape (self.iter,)
         学習用データに対する損失の記録
-    self.val_loss : 次の形のndarray, shape (self.iter,)
+    val_loss : 次の形のndarray, shape (self.iter,)
         検証用データに対する損失の記録
     """
 
